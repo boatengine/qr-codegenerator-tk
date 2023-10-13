@@ -37,9 +37,11 @@ def saveQR(*args):
 
 root = tk.Tk()
 root.title("QR Code Generator")
+root.iconbitmap('E:/QRGen/iiccc.ico')
 root.geometry("300x380")
 root.config(bg='white')
 root.resizable(0,0)
+
 
 
 frame1 = tk.Frame(root,bd=2,relief=tk.RAISED)
