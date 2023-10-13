@@ -17,7 +17,7 @@ def createQR(*args):
         qr_canvas.create_image(0,0,anchor=tk.NW, image=tkimage)
         qr_canvas.image = tkimage
     else:
-        messagebox.showwarning("Warning",'Enter Data in Entry First')
+        messagebox.showwarning("เกิดข้อผิดพลาด",'กรอกข้อมูลด้วยย')
 
 def saveQR(*args):
     data = text_entry.get()
@@ -28,9 +28,9 @@ def saveQR(*args):
         path = filedialog.asksaveasfilename(defaultextension=".png",)
         if path:
             res_img.save(path)
-            messagebox.showinfo("Sucess","QR Code is Saved ")
+            messagebox.showinfo("สำเร็จ","QR Code บันทึกสำเร็จ!!")
     else:
-        messagebox.showwarning("Warning",'Enter Data in Entry First')
+        messagebox.showwarning("เกิดข้อผิดพลาด",'กรอกข้อมูลด้วยย')
     
 
 
@@ -60,13 +60,13 @@ text_entry = ttk.Entry(frame2,width=26,font=("Sitka Small",11),justify=tk.CENTER
 text_entry.bind("<Return>",createQR)
 text_entry.place(x=5,y=5)
 
-btn_1 = ttk.Button(frame2,text="Create",width=10,command=createQR)
+btn_1 = ttk.Button(frame2,text="สร้าง",width=10,command=createQR)
 btn_1.place(x=25,y=50)
 
-btn_2 = ttk.Button(frame2,text="Save",width=10,command=saveQR)
+btn_2 = ttk.Button(frame2,text="บันทึก",width=10,command=saveQR)
 btn_2.place(x=100,y=50)
 
-btn_3 = ttk.Button(frame2,text="Exit",width=10,command=root.quit)
+btn_3 = ttk.Button(frame2,text="ออก",width=10,command=root.quit)
 btn_3.place(x=175,y=50)
 
 
